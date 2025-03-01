@@ -1,0 +1,86 @@
+/*Outer Container*/
+.navbar {
+    background: #1c2237;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+/*Navbar Container*/
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+/* Logo Container */
+.navbar_logo {
+    color: #fff;
+    justify-self: start;
+    text-decoration: none;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Logo Icon */
+.logo_icon {
+    margin-right: 0.5rem;
+}
+
+/* Menu Icon Container */
+.navbar_toggle {
+    display: none;
+}
+
+/* Open Menu Icon */
+.toggle_icon2 {
+    color: white;
+}
+
+
+
+
+
+/* CSS settings for Mobile */
+@media screen and (max-width: 985px) {
+
+    /* Navbar logo */
+    .navbar_logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(25%, 50%);
+        cursor: pointer;
+    }
+
+    /* Menu Icon Container */
+    .navbar_toggle {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+
+    /* Close Menu Icon */
+    .toggle_icon1 {
+        color: #fff;
+        font-size: 2rem;
+    }
+}

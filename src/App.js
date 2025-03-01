@@ -1,25 +1,35 @@
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Navbar from './components/Navbar/Navbar';
+import HomePage from './pages/Home/HomePage';
+import CoursesPage from './pages/Courses/CoursesPage';
+import ExamsPage from './pages/Exams/ExamsPage';
+import ForumPage from './pages/Forum/ForumPage';
+import ChatPage from './pages/Chat/ChatPage';
+
 import './App.css';
 
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    
+    return (
+        <>
+            <BrowserRouter>
+                {/* Navbar */}
+                <Navbar />
+
+                {/* Routes */}
+                <Routes>
+                    <Route index element={<HomePage />} />
+                    <Route path="courses" element={<CoursesPage />} />
+                    <Route path="exams" element={<ExamsPage />} />
+                    <Route path="forum" element={<ForumPage />} />  
+                    <Route path="chat" element={<ChatPage />} />        
+                </Routes>
+            </BrowserRouter>
+        </>
+    );
 }
 
 export default App;
