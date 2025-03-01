@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './homePage.css';
+import HeroSection from '../../components/HeroSection/HeroSection';
 
 const HomePage = () => {
 
@@ -8,7 +9,7 @@ const HomePage = () => {
     
     return (
         <>
-            <h1>Home Page</h1>
+            <HeroSection />
         </>
     )
 };

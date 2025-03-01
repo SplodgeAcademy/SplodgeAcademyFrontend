@@ -22,7 +22,7 @@ const Navbar = () => {
 
 
     return (
-        <div className='Navbar'>
+        <div className='navbar'>
             <div className="navbar_container container">
 
                 {/* Logo Section */}
