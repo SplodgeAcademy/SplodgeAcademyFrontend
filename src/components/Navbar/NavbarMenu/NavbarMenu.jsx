@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { NavbarMenuLinks } from '../../../data/Lists/NavbarMenuLinks';
+import { NavbarMenuLinks } from '../../../data/Links/NavbarMenuLinks';
 import './navbarMenu.css';
 
 
@@ -35,7 +35,7 @@ const NavbarMenu = ({toggle, handleClose}) => {
 
             {/* Menu Links */}
             {NavbarMenuLinks.map((link, index) => (
-                <li className="menu_link_container" id={index + 1} onClick={handleClose}>
+                <li className="menu_link_container" key={index + 1} onClick={handleClose}>
                     <Link to={link[1]} className="menu_link" >
                         {link[0]}
                     </Link>

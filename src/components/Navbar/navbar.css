@@ -58,16 +58,17 @@
 
 
 /* CSS settings for Mobile */
-@media screen and (max-width: 985px) {
+@media screen and (max-width: 1200px) {
+    .navbar_logo {
+        font-size: 1.5rem;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
 
     /* Navbar logo */
-    .navbar_logo {
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translate(25%, 50%);
-        cursor: pointer;
-    }
+    
 
     /* Menu Icon Container */
     .navbar_toggle {

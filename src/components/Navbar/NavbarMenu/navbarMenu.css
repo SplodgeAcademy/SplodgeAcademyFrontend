@@ -77,7 +77,14 @@
 
 
 /* CSS settings for Mobile */
-@media screen and (max-width: 985px) {
+
+@media screen and (max-width: 1115px) {
+    .menu_search_container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
     /* Menu Container */
     .navbar_menu {
         display: flex;
