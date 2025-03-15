@@ -1,13 +1,23 @@
-// Links for footer
+// Links for Footer
 export const FooterLinks = [
+    // Titles
     [
-        ['Grammar', '/exams'],
-        ['Writing', '/exams'],
-        ['Listening', '/exams'],
-        ['Reading', '/exams'],
-        ['Speaking', '/exams'],
+        ['Exams'],
+        ['Content'],
+        ['Account'],
+        ['Socialise']
     ],
 
+    // Exams
+    [
+        ['Grammar', '/useOfEnglish'],
+        ['Writing', '/writing'],
+        ['Listening', '/listening'],
+        ['Reading', '/reading'],
+        ['Speaking', '/speaking'],
+    ],
+
+    // Content
     [
         ['Courses', '/courses'],
         ['Topics', '/courses'],
@@ -16,6 +26,7 @@ export const FooterLinks = [
         ['Vocabulary', '/courses'],
     ],
 
+    // Account
     [
         ['Profile', '/profile'],
         ['Friends', '/profile'],
@@ -24,6 +35,7 @@ export const FooterLinks = [
         ['Achievements', '/profile'],
     ],
 
+    // Socialise
     [
         ['Forum', '/forum'],
         ['Chat', '/chat'],

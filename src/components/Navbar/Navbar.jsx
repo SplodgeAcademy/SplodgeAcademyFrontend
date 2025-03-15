@@ -3,8 +3,10 @@ import { FaSpaceAwesome } from "react-icons/fa6";
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-import './navbar.css';
 import NavbarMenu from './NavbarMenu/NavbarMenu';
+import { Branding } from '../../data/Branding/Branding';
+import './navbar.css';
+
 
 
 
@@ -28,15 +30,15 @@ const Navbar = () => {
                 {/* Logo Section */}
                 <Link to="/" className="navbar_logo" onClick={handleClose}>
                     <FaSpaceAwesome className="logo_icon" />
-                    Splodge Academy
+                    {Branding.name}
                 </Link>
 
-                {/* Menu Toggle Icons */}
+                {/* Toggle Icons - Open and close menu when clicked */}
                 <div className="navbar_toggle" onClick={handleToggle}>
                     {toggle ? <FaTimes className='toggle_icon1' /> : <FaBars className='toggle_icon2' />}
                 </div>
 
-                {/* Menu Component - container Searchbar, links and Log In button */}
+                {/* Menu Component - contains Searchbar, links and Log In button */}
                 <NavbarMenu handleClose={handleClose} toggle={toggle} />
             </div>
         </div>

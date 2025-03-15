@@ -9,6 +9,7 @@ import './navbarMenu.css';
 
 const NavbarMenu = ({toggle, handleClose}) => {
 
+    // Term that is typed into searchbar
     const [searchTerm, setSearchTerm] = useState("");
     
     // Helper method to stop refresh from hidden submit button

@@ -5,6 +5,7 @@ import { FaSpaceAwesome } from 'react-icons/fa6';
 
 import { SMLinks } from '../../data/Links/SocialMediaLinks';
 import { FooterLinks } from '../../data/Links/FooterLinks';
+import { Branding } from '../../data/Branding/Branding';
 import './footer.css';
 
 
@@ -14,15 +15,15 @@ const Footer = () => {
 
 
     return (
-        <div className='footer_container'>
+        <footer className='footer_container'>
             <div className="footer_wrapper">
                 <div className="links_container">
                     <div className="links_wrapper">
                         {/* Exam Links */}
                         <div className="link_items">
-                            <h1 className="link_title">Exams</h1>
+                            <h1 className="link_title">{FooterLinks[0][0]}</h1>
 
-                            {FooterLinks[0].map((link, index) => (
+                            {FooterLinks[1].map((link, index) => (
                                 <Link to={link[1]} key={index} className="footer_link" >
                                     {link[0]}
                                 </Link>
@@ -31,9 +32,9 @@ const Footer = () => {
 
                         {/* Content Links */}
                         <div className="link_items">
-                            <h1 className="link_title">Content</h1>
+                            <h1 className="link_title">{FooterLinks[0][1]}</h1>
 
-                            {FooterLinks[1].map((link, index) => (
+                            {FooterLinks[2].map((link, index) => (
                                 <Link to={link[1]} key={index} className="footer_link" >
                                     {link[0]}
                                 </Link>
@@ -44,9 +45,9 @@ const Footer = () => {
                     <div className="links_wrapper">
                         {/* Account Links */}
                         <div className="link_items">
-                            <h1 className="link_title">Account</h1>
+                            <h1 className="link_title">{FooterLinks[0][2]}</h1>
 
-                            {FooterLinks[2].map((link, index) => (
+                            {FooterLinks[3].map((link, index) => (
                                 <Link to={link[1]} key={index} className="footer_link" >
                                     {link[0]}
                                 </Link>
@@ -55,9 +56,9 @@ const Footer = () => {
                         
                         {/* Socialise Links */}
                         <div className="link_items">
-                            <h1 className="link_title">Socialise</h1>
+                            <h1 className="link_title">{FooterLinks[0][3]}</h1>
 
-                            {FooterLinks[3].map((link, index) => (
+                            {FooterLinks[4].map((link, index) => (
                                 <Link to={link[1]} key={index} className="footer_link" >
                                     {link[0]}
                                 </Link>
@@ -71,12 +72,12 @@ const Footer = () => {
                         {/* Logo */}
                         <Link to='/' className="social_logo">
                             <FaSpaceAwesome className="logo_icon" />
-                            Splodge Academy
+                            {Branding.name}
                         </Link>
 
                         {/* Slogan */}
                         <small className="social_message">
-                            Mastering English made fun!
+                            {Branding.slogan}
                         </small>
 
                         {/* Social Media Icons */}
@@ -109,7 +110,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
     )
 };
 
