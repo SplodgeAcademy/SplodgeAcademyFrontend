@@ -45,9 +45,9 @@ const NavbarMenu = ({toggle, handleClose}) => {
             
             {/* Log In Button */}
             <li className="menu_logIn" onClick={handleClose}>
-                <button className="logIn_button" >
+                <Link to={"logIn"} className="logIn_button" >
                     Log In
-                </button>  
+                </Link>  
             </li>
         </ul>
     )

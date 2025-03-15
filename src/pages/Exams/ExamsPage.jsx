@@ -1,14 +1,20 @@
 import React from 'react';
+
+import OptionsGrid from '../../components/OptionsGrid/OptionsGrid';
+import { LevelSelector } from '../../data/Menus/GridOptions';
+
 import './examsPage.css';
+
+
 
 const ExamsPage = () => {
 
 
     
     return (
-        <div>
-            <h1>Exams Page</h1>
-        </div>
+        <>
+            <OptionsGrid {...LevelSelector} />
+        </>
     )
 };
 
