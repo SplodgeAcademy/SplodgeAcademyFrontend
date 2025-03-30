@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 
+import { AuthContext } from '../../../context/authContext/AuthContext';
 import { NavbarMenuLinks } from '../../../data/Links/NavbarMenuLinks';
 import './navbarMenu.css';
-
+import { logOutCall } from '../../../apiCalls/User/LogOutCall';
 
 
 
@@ -17,6 +18,14 @@ const NavbarMenu = ({toggle, handleClose}) => {
         e.preventDefault();
         handleClose();
     };
+
+    const { user, token, dispatch } = useContext(AuthContext);
+
+    // Handles log out
+    const handleLogOut = async (e) => {
+        e.preventDefault();
+        logOutCall(token, dispatch);
+    }
 
 
 
@@ -45,9 +54,15 @@ const NavbarMenu = ({toggle, handleClose}) => {
             
             {/* Log In Button */}
             <li className="menu_logIn" onClick={handleClose}>
-                <Link to={"logIn"} className="logIn_button" >
-                    Log In
-                </Link>  
+                {user ? (
+                    <button onClick={handleLogOut} className="logIn_button" >
+                        Log Out
+                    </button>
+                ) : (
+                    <Link to={"logIn"} className="logIn_button" >
+                        Log In
+                    </Link>  
+                )}
             </li>
         </ul>
     )
