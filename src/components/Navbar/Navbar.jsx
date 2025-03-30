@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaSpaceAwesome } from "react-icons/fa6";
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 import NavbarMenu from './NavbarMenu/NavbarMenu';
 import { Branding } from '../../data/Branding/Branding';
+import { AuthContext } from '../../context/authContext/AuthContext';
 import './navbar.css';
 
 
@@ -20,8 +21,7 @@ const Navbar = () => {
     const handleToggle = () => setToggle(!toggle);
     const handleClose = () => setToggle(false);
 
-
-
+    const { user } = useContext(AuthContext);
 
     return (
         <div className='navbar'>
@@ -30,7 +30,7 @@ const Navbar = () => {
                 {/* Logo Section */}
                 <Link to="/" className="navbar_logo" onClick={handleClose}>
                     <FaSpaceAwesome className="logo_icon" />
-                    {Branding.name}
+                    {user ? user.name : Branding.name}
                 </Link>
 
                 {/* Toggle Icons - Open and close menu when clicked */}
