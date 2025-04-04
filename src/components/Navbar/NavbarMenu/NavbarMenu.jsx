@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../context/authContext/AuthContext';
 import { NavbarMenuLinks } from '../../../data/Links/NavbarMenuLinks';
 import './navbarMenu.css';
-import { logOutCall } from '../../../apiCalls/User/LogOutCall';
+import { logOutCall } from '../../../apiCalls/Auth/LogOutCall';
 
 
 

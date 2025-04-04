@@ -8,7 +8,7 @@ import { AiOutlineSwapRight } from 'react-icons/ai';
 
 import image from '../../../images/branding/svg-spaceship.svg';
 import { AuthContext } from '../../../context/authContext/AuthContext';
-import { registrationCall } from '../../../apiCalls/User/RegisterCall';
+import { registrationCall } from '../../../apiCalls/Auth/RegisterCall';
 import './authForm.css';
 
 
