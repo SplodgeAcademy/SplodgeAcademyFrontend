@@ -1,9 +1,8 @@
 import React from 'react';
 
-import OptionsGrid from '../../components/OptionsGrid/OptionsGrid';
-import { LevelSelector } from '../../data/Menus/GridOptions';
-
+import SelectLevelsGrid from '../../components/OptionGrids/Levels/SelectLevelsGrid';
 import './examsPage.css';
+
 
 
 
@@ -13,7 +12,7 @@ const ExamsPage = () => {
     
     return (
         <>
-            <OptionsGrid {...LevelSelector} />
+            <SelectLevelsGrid />
         </>
     )
 };
