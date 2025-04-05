@@ -1,5 +1,4 @@
 import React from 'react';
-import './profilePage.css';
 
 const ProfilePage = () => {
 

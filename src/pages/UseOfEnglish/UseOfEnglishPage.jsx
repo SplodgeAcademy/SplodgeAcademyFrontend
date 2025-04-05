@@ -1,5 +1,4 @@
 import React from 'react';
-import './useOfEnglishPage.css';
 
 const UseOfEnglishPage = () => {
 
