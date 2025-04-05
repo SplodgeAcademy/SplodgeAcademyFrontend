@@ -21,7 +21,7 @@ const Navbar = () => {
     const handleToggle = () => setToggle(!toggle);
     const handleClose = () => setToggle(false);
 
-    const { user } = useContext(AuthContext);
+    const { currentUser } = useContext(AuthContext);
 
     return (
         <div className='navbar'>
@@ -30,7 +30,7 @@ const Navbar = () => {
                 {/* Logo Section */}
                 <Link to="/" className="navbar_logo" onClick={handleClose}>
                     <FaSpaceAwesome className="logo_icon" />
-                    {user ? user.name : Branding.name}
+                    {currentUser ? currentUser._name : Branding.name}
                 </Link>
 
                 {/* Toggle Icons - Open and close menu when clicked */}
