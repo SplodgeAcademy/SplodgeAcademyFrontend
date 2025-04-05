@@ -1,5 +1,4 @@
 import React from 'react';
-import './listeningPage.css';
 
 const ListeningPage = () => {
 

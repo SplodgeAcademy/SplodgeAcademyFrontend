@@ -1,0 +1,22 @@
+.links_container {
+    display: flex;
+    justify-content: center;
+}
+
+.links_wrapper {
+    display: flex;
+}
+
+
+
+
+
+@media screen and (max-width: 820px) {
+    .links_container{
+        padding-top: 32px;
+    }
+
+    .links_wrapper {
+        flex-direction: column;
+    }
+}

@@ -1,8 +1,7 @@
 import React from 'react';
 
-import AuthDisplay from '../../components/Auth/AuthDisplay/AuthDisplay';
-import RegisterForm from '../../components/Auth/AuthForms/RegisterForm';
-import './registerPage.css';
+import Auth from '../../components/Auth/Auth';
+
 
 
 const RegisterPage = () => {
@@ -10,12 +9,7 @@ const RegisterPage = () => {
     
     return (        
         <>
-            <div className="register-page">
-                <div className="register-container">
-                    <AuthDisplay page="register" />
-                    <RegisterForm />
-                </div>
-            </div>
+            <Auth page={"register"} />
         </>
     )
 };

@@ -1,5 +1,4 @@
 import React from 'react';
-import './searchPage.css';
 
 const SearchPage = () => {
 

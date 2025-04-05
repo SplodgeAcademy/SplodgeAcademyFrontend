@@ -9,15 +9,17 @@ const AuthDisplay = ({ page }) => {
 
     return (
         <>
-            {/* Video Side */}
             <div className="video-container">
+                {/* Video */}
                 <video src={video} autoPlay muted loop></video>
 
+                {/* Text */}
                 <div className="text-container">
                     <h2 className="title">Something goes here for the title</h2>
                     <p>Something goes here</p>
                 </div>
 
+                {/* Log in / Sign up link */}
                 <div className="bottom">
                     <span className="text">{page === "logIn" ? "Don't have an account?" : "Have an account?"}</span>
                     <Link to={page === "logIn" ? "/register" : "/logIn"} >

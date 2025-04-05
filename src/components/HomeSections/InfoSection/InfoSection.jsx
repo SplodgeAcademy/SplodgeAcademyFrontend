@@ -1,39 +1,27 @@
 import React from 'react';
 
-import Button from '../../Button/Button';
+import SectionButton from '../SectionButton/SectionButton';
 import './infoSection.css';
 
 
 
-const BACKGROUNDS = ['info--bgDark', 'info--bgLight'];
-const TEXTCOLORS = ['info--textLight', 'info--textDark'];
-const DESCCOLORS = ['info--descDark', 'info--descLight'];
-const STYLES = ['info--start', 'info--end'];
-
-
-const InfoSection = ({ id, background, textColor, descColor, infoStyle, topLine, heading, desc, buttonLabel, btnStyle, btnColor, to, img }) => {
-
-    // Set default styling
-    const checkBackground = BACKGROUNDS.includes(background) ? background : BACKGROUNDS[0];
-    const checktextColor = TEXTCOLORS.includes(textColor) ? textColor : TEXTCOLORS[0];
-    const checkDescColor = DESCCOLORS.includes(descColor) ? descColor : DESCCOLORS[0];
-    const checkImageStart =STYLES.includes(infoStyle) ? infoStyle : STYLES[0];
+const InfoSection = ({ id, textStart, topLine, heading, desc, buttonLabel, to, img }) => {
 
 
     return (
-        <div className={`info_container ${checkBackground}`} id={id}>
+        <div className={`info_container ${textStart ? 'bgDark' : 'bgLight'}`} id={id}>
             <div className="info_wrapper">
-                <div className={`info_row ${checkImageStart}`}>
+                <div className={`info_row ${textStart ? 'start' : 'end'}`}>
                     <div className="column1">
                         <div className="text_wrapper">
-                            {/* Content */}
+                            {/* Text */}
                             <p className="top_line">{topLine}</p>
-                            <h1 className={`heading ${checktextColor}`}>{heading}</h1>
-                            <p className={`subtitle ${checkDescColor}`}>{desc}</p>
+                            <h1 className={`heading ${textStart ? 'light-text' : 'dark-text'}`}>{heading}</h1>
+                            <p className={`subtitle ${textStart ? 'light-text' : 'dark-text'}`}>{desc}</p>
 
                             {/* Link */}
                             <div className="btn_wrap">
-                                <Button to={to} btnColor={btnColor} btnStyle={btnStyle} children={buttonLabel} />
+                                <SectionButton to={to} btnStyle={textStart ? "green" : "dark"} children={buttonLabel} />
                             </div>
                         </div>
                     </div>

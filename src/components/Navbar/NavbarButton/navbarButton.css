@@ -1,0 +1,39 @@
+/* Styling for the log in button */
+.logIn_button {
+    padding: 8px 20px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    background-color: transparent;
+    color: #fff;
+    padding: 8px 20px;
+    border: 1px solid white;
+    transition: all 0.3s ease-out;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+/* Hover effect for the log in button */
+.logIn_button:hover {
+    transition: all 0.3s ease-out;
+    background: #fff;
+    color: #242424;
+}
+
+
+
+/* CSS settings for Mobile */
+
+
+@media screen and (max-width: 800px) {
+    /* Log In Button container stylings for menu mode */
+    .menu_logIn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 120px;
+    }
+}

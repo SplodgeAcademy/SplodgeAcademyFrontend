@@ -1,5 +1,4 @@
 import React from 'react';
-import './readingPage.css';
 
 const ReadingPage = () => {
 
