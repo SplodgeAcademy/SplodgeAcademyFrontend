@@ -22,7 +22,7 @@ import './App.css';
 
 function App() {
 
-    const { user } = useContext(AuthContext);
+    const { currentUser } = useContext(AuthContext);
 
 
 
@@ -33,15 +33,15 @@ function App() {
                 {/* Routes */}
                 <Routes>
                     <Route index element={<HomePage />} />
-                    <Route path="courses" element={user ? <CoursesPage /> : <LogInPage />} />
+                    <Route path="courses" element={<CoursesPage />} />
                     <Route path="exams" element={<ExamsPage />} />
                     <Route path="forum" element={<ForumPage />} />  
                     <Route path="chat" element={<ChatPage />} />
                     <Route path="search" element={<SearchPage />} />
                     <Route path="profile" element={<ProfilePage />} /> 
 
-                    <Route path="logIn" element={user ? <HomePage /> : <LogInPage />} /> 
-                    <Route path="register" element={user ? <HomePage /> : <RegisterPage />} />
+                    <Route path="logIn" element={currentUser._name === "Guest" ? <LogInPage /> : <HomePage />} /> 
+                    <Route path="register" element={currentUser._name === "Guest" ? <RegisterPage /> : <HomePage />} />
 
                     <Route path="useOfEnglish" element={<UseOfEnglishPage />} />
                     <Route path="writing" element={<WritingPage />} /> 

@@ -19,7 +19,7 @@ const NavbarMenu = ({toggle, handleClose}) => {
         handleClose();
     };
 
-    const { user, token, dispatch } = useContext(AuthContext);
+    const { currentUser, token, dispatch } = useContext(AuthContext);
 
     // Handles log out
     const handleLogOut = async (e) => {
@@ -54,14 +54,14 @@ const NavbarMenu = ({toggle, handleClose}) => {
             
             {/* Log In Button */}
             <li className="menu_logIn" onClick={handleClose}>
-                {user ? (
-                    <button onClick={handleLogOut} className="logIn_button" >
-                        Log Out
-                    </button>
-                ) : (
+                {currentUser._name === "Guest" ? (
                     <Link to={"logIn"} className="logIn_button" >
                         Log In
                     </Link>  
+                ) : (
+                    <button onClick={handleLogOut} className="logIn_button" >
+                        Log Out
+                    </button> 
                 )}
             </li>
         </ul>

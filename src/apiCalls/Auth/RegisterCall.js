@@ -17,10 +17,13 @@ export const registrationCall = async (email, password, dispatch) => {
         const tokenRes = await axios.post(baseUrl + "/users",
             {
                 "email": email,
+                "name": "test",
                 "password": password,
                 "client_id": client_id
             }
         );
+
+        console.log(tokenRes);
 
         // Try to get User
         const userRes = await axios.get(baseUrl + `/users/me`,
@@ -31,6 +34,8 @@ export const registrationCall = async (email, password, dispatch) => {
                 }
             }
         );
+
+        console.log(userRes);
 
 
         // Dispatch Success action with user and token

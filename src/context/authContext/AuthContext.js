@@ -1,6 +1,7 @@
 import { createContext, useEffect, useReducer } from 'react';
 
 import AuthReducer from './AuthReducer';
+import { CurrentUser } from '../../classes/CurrentUser';
 
 
 
@@ -23,15 +24,15 @@ export const AuthContextProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(AuthReducer, INITIAL_STATE);
 
-    console.log(state.user);
-
+    let currentUser = new CurrentUser(state.user);
+    console.log(currentUser);
 
     // Store User and Token in local Storage when changed in state
     useEffect(() => {
         localStorage.setItem('user', JSON.stringify(state.user));
-        localStorage.setItem('token', JSON.stringify(state.token));
-        console.log(state.user);
+        localStorage.setItem('token', JSON.stringify(state.token)); 
     }, [state.user, state.token]);
+
 
 
 
@@ -39,7 +40,7 @@ export const AuthContextProvider = ({ children }) => {
     return (
         <AuthContext.Provider
             value={{
-                user: state.user,
+                currentUser: currentUser,
                 token: state.token,
                 isFetching: state.isFetching,
                 error: state.error,

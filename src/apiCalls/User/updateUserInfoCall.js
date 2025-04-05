@@ -19,9 +19,12 @@ export const updateUserInfoCall = async ( token, infoToChange, dispatch) => {
 
         console.log(infoRes);
 
+        localStorage.setItem('user', JSON.stringify(infoRes.data));
+
         // Dispatch Success action with user
         dispatch({ type: "USER_UPDATE", payload: infoRes.data });
-        //window.location.reload();
+        
+        window.location.reload();
     } catch (err) {
         console.log(err);
     }

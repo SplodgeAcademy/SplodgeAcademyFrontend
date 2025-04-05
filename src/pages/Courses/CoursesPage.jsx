@@ -1,4 +1,4 @@
-import React, { use, useContext } from 'react';
+import React, { useContext } from 'react';
 
 import SelectLevelsGrid from '../../components/OptionGrids/Levels/SelectLevelsGrid';
 import  Navbar from '../../components/Navbar/Navbar';
@@ -9,14 +9,13 @@ import './coursesPage.css';
 
 const CoursesPage = () => {
 
-    const { user } = useContext(AuthContext);
-    console.log(user.level);
+    const { currentUser } = useContext(AuthContext);
     
     return (
         <>
             {/* Navbar */}
             <Navbar />
-            {user.level === "notSelected" ? <SelectLevelsGrid /> : ""}
+            {currentUser._level === "notSelected" ? <SelectLevelsGrid /> : ""}
         </>
     )
 };
