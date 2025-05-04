@@ -49,7 +49,7 @@ const LogInForm = () => {
                         <label htmlFor="email">Email:</label>
                         <div className="input">
                             <MdMarkEmailRead className="icon" />
-                            <input type='email' required ref={emailRef} id="email" placeholder='Enter Email' />
+                            <input className='auth_input' type='email' required ref={emailRef} id="email" placeholder='Enter Email' />
                         </div>
                     </div>
 
@@ -58,7 +58,7 @@ const LogInForm = () => {
                         <label htmlFor="password">Password:</label>
                         <div className="input">
                             <BsFillShieldLockFill className="icon" />
-                            <input type='password' required ref={passwordRef} id="password" placeholder='Enter Password' />
+                            <input className='auth_input' type='password' required ref={passwordRef} id="password" placeholder='Enter Password' />
                         </div>
                     </div>
 

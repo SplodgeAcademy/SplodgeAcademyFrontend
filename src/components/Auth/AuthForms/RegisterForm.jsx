@@ -52,7 +52,7 @@ const RegisterForm = () => {
                         <label htmlFor="email">Email:</label>
                         <div className="input">
                             <MdMarkEmailRead className="icon" />
-                            <input type='email' required ref={emailRef} id="email" placeholder='Enter Email' />
+                            <input className='auth_input' type='email' required ref={emailRef} id="email" placeholder='Enter Email' />
                         </div>
                     </div>
             
@@ -61,7 +61,7 @@ const RegisterForm = () => {
                         <label htmlFor="password">Password:</label>
                         <div className="input">
                             <BsFillShieldLockFill className="icon" />
-                            <input type='password' required ref={passwordRef} id="password" placeholder='Enter Password' />
+                            <input className='auth_input' type='password' required ref={passwordRef} id="password" placeholder='Enter Password' />
                         </div>
                     </div>
             
@@ -70,7 +70,7 @@ const RegisterForm = () => {
                         <label htmlFor="confirm-password">Confirm Password:</label>
                         <div className="input">
                             <BsFillShieldLockFill className="icon" />
-                            <input type='password' required ref={passwordConfirmationRef} id="confirm-password" placeholder='Confirm Password' />
+                            <input className='auth_input' type='password' required ref={passwordConfirmationRef} id="confirm-password" placeholder='Confirm Password' />
                         </div>
                     </div>
             

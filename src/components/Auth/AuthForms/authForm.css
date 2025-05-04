@@ -57,7 +57,7 @@ label {
     background: hsl(16, 12%, 97%);
 }
 
-input {
+.auth_input {
     background: none;
     outline: none;
     border: none;

@@ -15,6 +15,7 @@ const CoursesPage = () => {
         <>
             {/* Navbar */}
             <Navbar />
+
             {currentUser._level === "notSelected" ? <LevelSelector /> : ""}
         </>
     )
